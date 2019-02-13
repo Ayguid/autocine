@@ -29,7 +29,7 @@ body{
 }
 
 .big_container{
-  background-color: rgb(var(--main-red));
+  /* background-color: rgb(var(--main-red)); */
   background-attachment: fixed;
   background-size: cover;
 }
@@ -46,11 +46,12 @@ body{
 }
 article.homeData {
 /*  just a fancy border  */
+  transform: translateY(-50%);
   position: absolute;
-  top: 0;
+  top: 75%;
   left: 0;
   right: 0;
-  bottom: 0;
+  /* bottom: 0; */
   /* border: 10px solid rgba(255, 255, 255, 0.5); */
   margin: 10px;
 }
@@ -60,7 +61,7 @@ article.homeData h1 {
   width: 100%;
   font-size: 5em;
   letter-spacing: 3px;
-  color: #fff;
+  color: rgb(247, 255, 89);
   font-family: Oswald, sans-serif;
   text-align: center;
 }
@@ -87,30 +88,39 @@ nav{
   display: flex;
   align-items: center;
   background-color: rgba(var(--main-grey), 0.4);
+  position: relative;
+  z-index: 10;
 }
 
 
 .nav_bar .navbar_logo{
+  padding: 10px;
   font-size: 1.1em;
   font-family: 'Staatliches', cursive;
   float: left;
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: space-around;
+}
+
+.nav_bar .navbar_logo img{
+  width: 100%;
+  align-self: center
 }
 .navbar_buttons{
   font-size: 1.1em;
   display: flex;
   justify-content: space-around;
   float: left;
-  width: 70%;
+  width: 80%;
 }
 
 
 .navbar_buttons a.nav_item {
   display: block;
   padding: 10px;
-  color: rgb(var(--main-white));
+  color: rgb(247, 255, 89);
+  /* color: rgb(var(--main-white)); */
   font-family: 'Staatliches', cursive;
   transition: 0.6s;
 }

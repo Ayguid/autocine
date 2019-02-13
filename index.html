@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/master.css">
   <title>Autocine</title>
+  <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
 </head>
 <body>
   <div class="big_container">
 
     <nav class="nav_bar">
       <div class="navbar_logo">
-        <h2>Autocine</h2>
+        <img src="./img/logoOk.png" alt="">
       </div>
       <div class="navbar_buttons">
         <a class="nav_item" href="#">Nosotros</a>
@@ -26,7 +27,14 @@
 
 
       <article class="homeData">
-        <h1>Autocine <br /> <span>(Una banda<a href="#" target="_blank">Distinta</a>, para <a href="#">La gente</a>)</span></h1>
+        <div class="owl-carousel owl-theme responsive">
+          <div> <img src="./img/banda.jpg" alt=""> </div>
+          <div> <img src="./img/banda2.jpg" alt=""> </div>
+          <div> <img src="./img/banda4.jpg" alt=""> </div>
+          <!-- <div> <img src="./img/banda.jpg" alt=""> </div> -->
+        </div>
+        <!-- <h1>Autocine</h1> -->
+        <!-- <h1>Autocine <br /> <span>(Una banda<a href="#" target="_blank">Distinta</a>, para <a href="#">La gente</a>)</span></h1> -->
       </article>
 
       <video autoplay loop id="video-background" muted plays-inline>
@@ -39,5 +47,8 @@
 
 
     </div>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="./js/owl-options.js"></script>
   </body>
   </html>
