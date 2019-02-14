@@ -57,10 +57,9 @@ table {
 html {
 	overflow: scroll;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
-.clear{
-	clear: both;
-}
+
 ::-webkit-scrollbar {
 	width: 0px;  /* remove scrollbar space */
 	background: transparent;  /* optional: just make scrollbar invisible */
@@ -103,6 +102,11 @@ body{
 
 
 .nav_bar{
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
 	display: flex;
 	align-items: center;
 	background-color: rgba(var(--main-grey), 0.4);
@@ -132,31 +136,33 @@ body{
 	display: block;
 	padding: 10px;
 	color: rgb(247, 255, 89) ;
-	/* color: rgb(var(--main-white)); */
 	font-family: 'Staatliches', cursive;
-	/* transition: 0.6s; */
 }
 
 
 .inner_container {
 	width: 90%;
 	margin: auto;
-	position: relative;
 }
-.carousel_container{
-	
-	/* width: 100%; */
+.inner_container section{
+	padding-top: 136px;
+}
 
+.carousel_container{
 }
 .content p{
 	color:rgb(var(--main-white));
 	font-family: 'Staatliches', cursive;
+	font-size: 2em;
+	line-height: 2.1em;
 }
 
 
 
 
-
+.clear{
+	clear: both;
+}
 
 
 

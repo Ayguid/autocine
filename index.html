@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/flip.css">
+  <!-- <link rel="stylesheet" href="./css/flip2.css"> -->
   <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
   <title>Autocine</title>
 </head>
@@ -12,44 +14,126 @@
 
     <nav class="nav_bar">
       <div class="navbar_logo">
-        <img src="./img/logoOk.png" alt="">
+        <a href="#home"><img src="./img/logoOk.png" alt=""></a>
       </div>
       <div class="navbar_buttons">
-        <a class="nav_item" href="quienesSomos.html">Quienes Somos</a>
-        <a class="nav_item" href="discografia.html">Discografía</a>
-        <a class="nav_item" href="contactanos.html">Contactános</a>
+        <a class="nav_item" href="#quien_somos">Quienes Somos</a>
+        <a class="nav_item" href="#discografia">Discografía</a>
+        <a class="nav_item" href="#contactanos">Contactános</a>
       </div>
     </nav>
+
+
 
     <video autoplay loop id="video-background" muted plays-inline>
       <source src="./img/video.mp4" type="video/mp4">
       </video>
 
-    <div class="inner_container">
+      <div class="inner_container">
 
 
 
-      
-        <div class="carousel_container">
-        <div class="owl-carousel owl-theme responsive ">
-          <div> <img src="./img/banda.jpg" alt=""></div>
-          <div> <img src="./img/banda2.jpg" alt=""></div>
-          <div> <img src="./img/banda4.jpg" alt=""></div>
-          <div> <img src="./img/Autocine_Prensa07.jpg" alt=""></div><!-- achicar -->
-          <div> <img src="./img/Autocine_Prensa08.jpg" alt=""></div><!-- achicar -->
-          <div> <img src="./img/Autocine_Prensa04.jpg" alt=""></div><!-- achicar -->
+        <section id="home">
+          <div class="carousel_container">
+            <div class="owl-carousel owl-theme responsive ">
+              <div> <img src="./img/banda.jpg" alt=""></div>
+              <div> <img src="./img/banda2.jpg" alt=""></div>
+              <div> <img src="./img/banda4.jpg" alt=""></div>
+              <div> <img src="./img/Autocine_Prensa07.jpg" alt=""></div><!-- achicar -->
+              <div> <img src="./img/Autocine_Prensa08.jpg" alt=""></div><!-- achicar -->
+              <div> <img src="./img/Autocine_Prensa04.jpg" alt=""></div><!-- achicar -->
+            </div>
+          </div>
+        </section>
+
+        <section id="quien_somos">
+          <div class="content">
+            <p>
+              AUTOCINE es una banda de Rock/Pop de la Ciudad de Buenos Aires que actualmente se encuentra presentando
+              su segundo LP: "Como Es".
+              El sonido de la banda es producto de la cantidad de giras y presentaciones llevadas a cabo desde la salida de su
+              álbum debut ("Autocine", 2014) hasta la actualidad: rock puro y en vivo de un cuarteto a dos guitarras, con riffs
+              cautivantes y unas melodías.
+              Con shows a sala llena en The Roxy Live, Niceto Club, Makena Cantina Club y una exitosa gira internacional por
+              Chile (Onaciu, Loreto) la banda se proyecta como una de las revelaciones de la escena under porteña, mientras
+              se encuentra trabajando material nuevo para su tercer trabajo discográfico    </p>
+            </div>
+          </section>
+
+
+
+          <section id="discografia">
+            <div class="discos_container">
+
+                <label class="flipLabel">
+                  <input class="flipInput" type="checkbox"  />
+                  <div class="card">
+                    <div class="front"><img src="./img/disco1.png" alt=""></div>
+                    <div class="back"><iframe src="https://www.youtube.com/embed/_atEWW9kMnk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                  </div>
+                </label>
+
+
+
+
+                <label class="flipLabel">
+                  <input class="flipInput" type="checkbox" />
+                  <div class="card">
+                    <div class="front"><img src="./img/disco2.png" alt=""></div>
+                    <div class="back"><iframe src="https://www.youtube.com/embed/rvExZgK-JUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                  </div>
+                </label>
+
+            </div>
+
+          </section>
+
+          <section id="contactanos">
+            <div class="content">
+
+              <form action="#" method="post" id="contact_form">
+                <div class="name">
+                  <label for="name"></label>
+                  <input type="text" placeholder="Nombre" name="name" id="name_input" required>
+                </div>
+                <div class="email">
+                  <label for="email"></label>
+                  <input type="email" placeholder="Email" name="email" id="email_input" required>
+                </div>
+                <div class="telephone">
+                  <label for="name"></label>
+                  <input type="text" placeholder="Numero" name="telephone" id="telephone_input" required>
+                </div>
+                <div class="subject">
+                  <label for="subject"></label>
+                  <select placeholder="Asunto" name="subject" id="subject_input" required>
+                    <option disabled hidden selected>Asunto</option>
+                    <option>Quiero Contratarlos</option>
+                    <option>Quiero Mas información</option>
+                    <option>Uds son lo máximo</option>
+                  </select>
+                </div>
+                <div class="message">
+                  <label for="message"></label>
+                  <textarea name="message" placeholder="Escriba aqui" id="message_input" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="submit">
+                  <input type="submit" value="Mandar Mensaje" id="form_button" />
+                </div>
+              </form>
+
+            </div>
+
+          </section>
+
+
         </div>
       </div>
 
 
-      </div>
+      <script src="./node_modules/jquery/dist/jquery.js"></script>
+      <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="./js/owl-options.js" defer></script>
 
-    </div>
-
-
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <!-- <script type="text/javascript" src="./js/navigator.js"></script> -->
-    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="./js/owl-options.js" defer></script>
-  </body>
-  </html>
+    </body>
+    </html>
