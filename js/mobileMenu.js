@@ -1,14 +1,15 @@
 
 
 var burger = document.getElementById('show_nav');
-burger.onclick = function(){
-showNav();
-}
-
-
-
-
-function showNav() {
 var element = document.getElementById("navbar_buttons");
-element.classList.toggle("showMenu");
+
+
+burger.addEventListener('click', function(){
+  element.classList.toggle("showMenu");
+});
+
+
+
+window.onscroll = function (e) {
+element.classList.remove("showMenu");
 }

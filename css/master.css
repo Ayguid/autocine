@@ -174,15 +174,18 @@ font-size: 17px;
 }
 
 .content{
-		background-color: rgba(var(--main-grey), 0.4);
+		background-color: rgba(41, 41, 38, 0.64);
 }
 
 .content p{
-	color:rgb(var(--main-white));
+	/* color:rgb(var(--main-white)); */
+	color: rgb(194, 187, 169);
 	font-family: 'Staatliches', cursive;
 	font-size: 2em;
 	line-height: 2.1em;
 	text-align: justify;
+	padding: 10px;
+	/* background-color: rgba(250, 152, 255, 0.8); */
 }
 
 .discos_container{
@@ -403,7 +406,9 @@ textarea {
 		visibility: hidden;
 		height: 0;
 		opacity: 0;
-		transition: visibility 0s, opacity 0.5s linear;
+		/* transition: visibility 0s, opacity 0.5s linear; */
+		transition: height 1s ease-in-out;
+		/* transition:  2s  all; */
 		flex: none;
 		float: left;
 		width: 100%;
@@ -428,6 +433,7 @@ textarea {
 		margin-bottom: 25px;
 	}
 	.content p{
+
 		font-size: 1.3em;
 		line-height: 1.4em;
 	}

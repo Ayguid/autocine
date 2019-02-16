@@ -7,11 +7,6 @@ $(function() {
       if ($(this).scrollTop() < 50) {
          $("#nav").css({'background-color': 'rgba(145, 132, 134, 0.4)'});
       }
+
    });
 });
-
-
-
-// function scrollCheck(){
-//     console.log('pepe');
-// }
