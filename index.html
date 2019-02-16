@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/master.css">
-  <link rel="stylesheet" href="./css/flip.css">
-  <!-- <link rel="stylesheet" href="./css/flip2.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
   <title>Autocine</title>
+
 </head>
 <body>
   <div class="big_container">
 
-    <nav class="nav_bar">
+    <!-- <nav id="nav" class="nav_bar">
       <div class="navbar_logo">
         <a href="#home"><img src="./img/logoOk.png" alt=""></a>
       </div>
@@ -21,6 +21,22 @@
         <a class="nav_item" href="#discografia">Discografía</a>
         <a class="nav_item" href="#contactanos">Contactános</a>
       </div>
+    </nav> -->
+    <nav id="nav" class="nav_bar">
+      <div class="mobile_bars">
+      <div class="navbar_logo">
+        <a href="#home"><img src="./img/logoOk.png" alt=""></a>
+      </div>
+      <a id="show_nav" href="javascript:void(0);" class="icon" >
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+      <div id="navbar_buttons" class="navbar_buttons">
+        <a class="nav_item" href="#quien_somos">Quienes Somos</a>
+        <a class="nav_item" href="#discografia">Discografía</a>
+        <a class="nav_item" href="#contactanos">Contactános</a>
+      </div>
+
     </nav>
 
 
@@ -29,7 +45,7 @@
       <source src="./img/video.mp4" type="video/mp4">
       </video>
 
-      <div class="inner_container">
+      <div id="inner_container" class="inner_container">
 
 
 
@@ -48,6 +64,7 @@
 
         <section id="quien_somos">
           <div class="content">
+            <div class="inner_width">
             <p>
               AUTOCINE es una banda de Rock/Pop de la Ciudad de Buenos Aires que actualmente se encuentra presentando
               su segundo LP: "Como Es".
@@ -58,6 +75,7 @@
               Chile (Onaciu, Loreto) la banda se proyecta como una de las revelaciones de la escena under porteña, mientras
               se encuentra trabajando material nuevo para su tercer trabajo discográfico    </p>
             </div>
+          </div>
           </section>
 
 
@@ -65,24 +83,19 @@
           <section id="discografia">
             <div class="discos_container">
 
-                <label class="flipLabel">
-                  <input class="flipInput" type="checkbox"  />
-                  <div class="card">
-                    <div class="front"><img src="./img/disco1.png" alt=""></div>
-                    <div class="back"><iframe src="https://www.youtube.com/embed/_atEWW9kMnk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                  </div>
-                </label>
+            <div id="disco1" class="disco tapa">
+              <img src="./img/disco1.png" alt="">
+            </div>
+            <div id="disco2" class="disco tapa">
+              <img src="./img/disco2.png" alt="">
+            </div>
+            <div id="iframe1" class="disco hidden iframe">
+              <iframe src="https://www.youtube.com/embed/_atEWW9kMnk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="iframe2" class="disco hidden iframe">
+              <iframe src="https://www.youtube.com/embed/rvExZgK-JUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
-
-
-
-                <label class="flipLabel">
-                  <input class="flipInput" type="checkbox" />
-                  <div class="card">
-                    <div class="front"><img src="./img/disco2.png" alt=""></div>
-                    <div class="back"><iframe src="https://www.youtube.com/embed/rvExZgK-JUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                  </div>
-                </label>
 
             </div>
 
@@ -134,6 +147,8 @@
       <script src="./node_modules/jquery/dist/jquery.js"></script>
       <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
       <script type="text/javascript" src="./js/owl-options.js" defer></script>
-
+      <script type="text/javascript" src ="./js/iframesShow.js"></script>
+      <script type="text/javascript" src ="./js/scroller.js" defer></script>
+      <script type="text/javascript" src ="./js/mobileMenu.js" defer></script>
     </body>
     </html>

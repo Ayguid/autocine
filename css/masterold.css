@@ -64,13 +64,17 @@ html {
 	width: 0px;  /* remove scrollbar space */
 	background: transparent;  /* optional: just make scrollbar invisible */
 }
-
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+	/* background: #FF0000; */
+}
 :root{
 	--main-white: 244, 239, 236;
 	--main-orange: 213, 141, 52;
 	--main-red: 150, 61, 44;
 	--main-grey: 145, 132, 134;
 	--main-deepBlue: 36, 40, 50;
+	/* background-color: rgba(#918486, 0.4); */
 }
 
 
@@ -91,6 +95,7 @@ body{
 
 
 .big_container{
+	/* background-color: rgb(var(--main-red)); */
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -121,21 +126,23 @@ body{
 	align-items: center;
 	background-color: rgba(var(--main-grey), 0.4);
 }
-.mobile_bars{
-	width: 20%;
-}
+
 
 .nav_bar .navbar_logo{
 	padding: 10px;
-	width: 100%;
+	font-size: 1.1em;
+	font-family: 'Staatliches', cursive;
+	width: 20%;
+	flex-shrink: 0;
 }
 
-.nav_bar .navbar_logo a img{
-width:100%;
-
+.nav_bar .navbar_logo img{
+	width: 100%;
+	height: 100%;
+	/* align-self: center; */
 }
 .navbar_buttons{
-	font-size: 1.4em;
+	font-size: 1.1em;
 	display: flex;
 	justify-content: space-around;
 	width: 80%;
@@ -159,14 +166,18 @@ font-size: 17px;
 
 
 .inner_container {
+	/* width: 100%;
+	padding: 0 5%; */
 	margin: auto;
 	padding-top: 136px;
 }
 .inner_container section{
+	/* padding-top: 136px; */
 	margin-bottom: 50px;
+
 }
 .inner_width{
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -209,6 +220,7 @@ font-size: 17px;
 	left: 0;
 	width: 100%;
 	height: 50%;
+	/* color: #dbd7b8 */
 }
 
 
@@ -367,17 +379,11 @@ textarea {
 		margin: 20px auto;
 		width: 95%;
 	}
-
 }
 
 
 
 @media screen and (max-width: 600px) {
-	*[id]:before {
-		margin-top: -75.70px;
-		height: 75.70px;
-
-	}
 	.nav_bar{
 		flex: none;
 		display: block;
@@ -385,61 +391,38 @@ textarea {
 	.mobile_bars{
 		display: flex;
 		align-items: center;
-		width: 100%;
 	}
 	.nav_bar .navbar_logo{
 		float: left;
-		width: 40%;
+		width: 70%;
+	}
+	.nav_bar .navbar_logo img{
+		width: 50%;
 	}
 
 	.nav_bar a.icon {
 	  display: block;
 		float: right;
-		width: 60%;
-		text-align: right;
+		width: 20%;
 	}
 
 	.navbar_buttons {
+		/* display: none; */
 		visibility: hidden;
-		height: 0;
+		    height: 0;
 		opacity: 0;
 		transition: visibility 0s, opacity 0.5s linear;
 		flex: none;
 		float: left;
-		width: 100%;
+		width: 50%;
 		flex-direction: column;
 		align-items: flex-end;
-	}
 
-	.navbar_buttons a.nav_item {
-		width: 100%;
-		text-align:right;
 	}
 	.showMenu{
 		height: auto;
 		visibility: visible;
 		opacity: 1;
-	}
-	.inner_container {
-
-		padding-top:75px;
-	}
-	.inner_container section{
-		margin-bottom: 25px;
-	}
-	.content p{
-		font-size: 1.3em;
-		line-height: 1.4em;
-	}
-	.disco{
-		width: 98%;
-	}
-	.iframe{
-		height: 100%;
-	}
-
-	.iframe iframe{
-		height: 100%;
 	}
 
 }
